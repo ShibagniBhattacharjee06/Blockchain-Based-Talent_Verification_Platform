@@ -18,3 +18,8 @@ The vision is to create a trustless, tamper-proof, and decentralized talent veri
 - **Tamper-Proof Records**: Immutable records stored on the blockchain.
 - **Transparent and Secure**: Eliminates fraud and enhances trust in professional qualifications.
 
+## Contract Address:
+0xCc0b1dD2D2a086158129aF6c517AE8f305945827
+![image](https://github.com/user-attachments/assets/17998955-8631-42d4-89bc-a2719ca68926)
+
+
