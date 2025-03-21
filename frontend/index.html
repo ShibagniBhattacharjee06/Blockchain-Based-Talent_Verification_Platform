@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talent Verification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Blockchain Talent Verification</h1>
+        <div class="form-section">
+            <input type="text" id="talentName" placeholder="Enter Talent Name" class="input-field">
+            <input type="text" id="talentSkill" placeholder="Enter Talent Skill" class="input-field">
+            <button onclick="addTalent()" class="btn">Verify Talent</button>
+        </div>
+        <div class="talent-list" id="talentList"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    animation: fadeInBackground 2s ease-in-out;
+}
+
+@keyframes fadeInBackground {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container {
+    width: 40%;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.001);
+    backdrop-filter: blur(15px);
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff; }
+    to { text-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff; }
+}
+
+.input-field {
+    width: 80%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: rgba(16, 15, 15, 0.2);
+    color: #eae7e7;
+    transition: 0.3s;
+    font-size: 16px;
+    text-align: center;
+}
+
+.input-field:focus {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+}
+
+.btn {
+    background: linear-gradient(90deg, #00c896, #00a57a);
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #00a57a, #008060);
+    transform: scale(1.1);
+}
+
+.talent-list {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
